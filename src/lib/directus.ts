@@ -26,8 +26,8 @@ const authenticate = async (): Promise<void> => {
 
   authPromise = (async () => {
     try {
-      const email = process.env.DIRECTUS_EMAIL || "admin@example.com";
-      const password = process.env.DIRECTUS_PASSWORD || ")#$)";
+      const email = process.env.DIRECTUS_EMAIL;
+      const password = process.env.DIRECTUS_PASSWORD;
 
       await directus.login(email, password);
       isAuthenticated = true;
